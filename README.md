@@ -6,5 +6,4 @@ On completion it will have the following modules
   3) CRM
   4) HR
 # Technologies
-The backend will be an API powered by .NET Core (c#) and SQL Server
-The front-end will be a PWA built using Angular framework.
+The backend will be an API powered by .NET Core (c#) and SQL Server and front-end will be a PWA built using Angular framework.
