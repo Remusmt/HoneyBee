@@ -12,11 +12,9 @@ namespace HoneyBee.ApplicationCore.Entities
             ChildCategories = new HashSet<Category>();
             Code = "";
         }
-        //public CategoryType CategoryType { get; set; }
         public string Code { get; set; }
         public string Description { get; set; }
-        public Guid? ParentCategoryId { get; set; }
-        public bool InActive { get; set; }
+        public int? ParentCategoryId { get; set; }
         public Category ParentCategory { get; set; }
         public ICollection<Category> ChildCategories { get; set; }
     }

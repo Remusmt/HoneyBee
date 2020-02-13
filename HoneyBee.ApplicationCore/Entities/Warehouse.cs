@@ -12,7 +12,8 @@ namespace HoneyBee.ApplicationCore.Entities
         }
         public string Code { get; set; }
         public string Description { get; set; }
-        public Guid? DefaultBinId { get; set; }
+        public int? DefaultBinId { get; set; }
+
         public Bin DefaulftBin { get; set; }
         public ICollection<Bin> Bins { get; set; }
     }

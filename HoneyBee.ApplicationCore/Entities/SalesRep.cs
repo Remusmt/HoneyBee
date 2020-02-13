@@ -6,7 +6,7 @@ namespace HoneyBee.ApplicationCore.Entities
 {
     public class SalesRep: BaseEntity
     {
-        public Guid PersonId { get; set; }
-        public Entity Person { get; set; }
+        public int EntityId { get; set; }
+        public Entity Entity { get; set; }
     }
 }

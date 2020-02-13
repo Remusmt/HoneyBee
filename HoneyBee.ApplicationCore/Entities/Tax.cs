@@ -10,7 +10,7 @@ namespace HoneyBee.ApplicationCore.Entities
     /// </summary>
     public class Tax : BaseEntity
     {
-        public Guid TaxAgencyId { get; set; }
+        public int TaxAgencyId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public bool Taxable { get; set; }

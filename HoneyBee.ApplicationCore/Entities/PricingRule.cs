@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HoneyBee.ApplicationCore.Entities
 {
-    public class PricingRule
+    public class PricingRule : BaseEntity
     {
 
     }

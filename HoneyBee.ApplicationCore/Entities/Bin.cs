@@ -11,7 +11,8 @@ namespace HoneyBee.ApplicationCore.Entities
         public bool AvailableForSale { get; set; }
         public bool Pickable { get; set; }
         public bool Receivable { get; set; }
-        public Guid WarehouseId { get; set; }
+        public int WarehouseId { get; set; }
+
         public Warehouse Warehouse { get; set; }
     }
 }

@@ -5,7 +5,14 @@ using System.Text;
 
 namespace HoneyBee.ApplicationCore.Entities
 {
-    public class JournalDetail
+    /// <summary>
+    /// The single source of truth
+    /// Should think of merging this class with transaction details and using 
+    /// a field [SystemGenerated] to differentiate between user keyed in data and system generated lines
+    /// also (create a category for non posting accounts to use for LPO and other non posting transactions.
+    /// or allow nulls for accountId)
+    /// </summary>
+    public class JournalDetail : BaseEntity
     {
         /// <summary>
         /// Holds the ordering of the lines in the transaction
@@ -14,27 +21,31 @@ namespace HoneyBee.ApplicationCore.Entities
         /// <summary>
         /// Reference from the transactions
         /// </summary>
-        public Guid TransactionId { get; set; }
+        public int TransactionId { get; set; }
         /// <summary>
         /// Reference from the transactionDetail
         /// </summary>
-        public Guid? TransactionDetalId { get; set; }
+        public int? TransactionDetalId { get; set; }
         /// <summary>
         /// A reference from the charts of account
         /// </summary>
-        public Guid AccountId { get; set; }
+        public int AccountId { get; set; }
         /// <summary>
         /// Holds reference from tax
         /// </summary>
-        public Guid? TaxId { get; set; }
+        public int? TaxId { get; set; }
         /// <summary>
-        /// Holds reference to the organisation table
+        /// Holds reference to the entity table
         /// </summary>
-        public Guid? OrganisationId { get; set; }
+        public int? EntityId { get; set; }
         /// <summary>
         /// Holds reference to category
         /// </summary>
-        public Guid? CostcenterId { get; set; }
+        public int? CostcenterId { get; set; }
+        /// <summary>
+        /// Reference to item for ease of reporting
+        /// </summary>
+        public int? ItemId { get; set; }
         /// <summary>
         /// A date for when the transaction happened
         /// </summary>
@@ -51,6 +62,14 @@ namespace HoneyBee.ApplicationCore.Entities
         /// Transaction amount in company's currency
         /// </summary>
         public decimal Amount { get; set; }
+        /// <summary>
+        /// Reference to the currency for this line item
+        /// </summary>
+        public int CurrencyId { get; set; }
+        /// <summary>
+        /// Currency converion rate
+        /// </summary>
+        public decimal ExcangeRate { get; set; }
         /// <summary>
         /// Amount b4 conversion
         /// </summary>
@@ -78,7 +97,9 @@ namespace HoneyBee.ApplicationCore.Entities
         public Transaction Transaction { get; set; }
         public TransactionDetail TransactionDetail { get; set; }
         public Tax Tax { get; set; }
-        public Entity Organisation { get; set; }
+        public Entity Entity { get; set; }
         public Costcenter Costcenter { get; set; }
+        public Item Item { get; set; }
+        public Currency Currency { get; set; }
     }
 }

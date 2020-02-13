@@ -1,0 +1,8 @@
+C:\Users\remus\source\repos\HoneyBee\HoneyBee.ApplicationCore\bin\Debug\netcoreapp3.1\HoneyBee.ApplicationCore.deps.json
+C:\Users\remus\source\repos\HoneyBee\HoneyBee.ApplicationCore\bin\Debug\netcoreapp3.1\HoneyBee.ApplicationCore.dll
+C:\Users\remus\source\repos\HoneyBee\HoneyBee.ApplicationCore\bin\Debug\netcoreapp3.1\HoneyBee.ApplicationCore.pdb
+C:\Users\remus\source\repos\HoneyBee\HoneyBee.ApplicationCore\obj\Debug\netcoreapp3.1\HoneyBee.ApplicationCore.csprojAssemblyReference.cache
+C:\Users\remus\source\repos\HoneyBee\HoneyBee.ApplicationCore\obj\Debug\netcoreapp3.1\HoneyBee.ApplicationCore.AssemblyInfoInputs.cache
+C:\Users\remus\source\repos\HoneyBee\HoneyBee.ApplicationCore\obj\Debug\netcoreapp3.1\HoneyBee.ApplicationCore.AssemblyInfo.cs
+C:\Users\remus\source\repos\HoneyBee\HoneyBee.ApplicationCore\obj\Debug\netcoreapp3.1\HoneyBee.ApplicationCore.dll
+C:\Users\remus\source\repos\HoneyBee\HoneyBee.ApplicationCore\obj\Debug\netcoreapp3.1\HoneyBee.ApplicationCore.pdb

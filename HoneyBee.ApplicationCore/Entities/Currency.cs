@@ -1,6 +1,7 @@
 ﻿using HoneyBee.ApplicationCore.Entities.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace HoneyBee.ApplicationCore.Entities
@@ -11,10 +12,11 @@ namespace HoneyBee.ApplicationCore.Entities
         {
             CurrencyConversions = new HashSet<CurrencyConversion>();
         }
-        public Guid Id { get; set; }
+        [Key]
+        public int Id { get; set; }
         public string ISOCode { get; set; }
         public string Description { get; set; }
-        public Guid CountryId { get; set; }
+        public int CountryId { get; set; }
         public FormatSeparator ThousandSeparator { get; set; }
         public FormatSeparator DecimalSeparator { get; set; }
         public string GroupingFormat { get; set; }

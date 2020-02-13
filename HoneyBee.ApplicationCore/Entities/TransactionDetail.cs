@@ -18,16 +18,16 @@ namespace HoneyBee.ApplicationCore.Entities
         /// This is used to order items on form and on print.
         /// </summary>
         public int LineNumber { get; set; }
-        public Guid TransactionId { get; set; }
+        public int TransactionId { get; set; }
         public DateTime EnteredDate { get; set; }
         public DateTime TransactionDate { get; set; }
-        public Guid? TaxItemId { get; set; }
+        public int? TaxItemId { get; set; }
         /// <summary>
         /// Costcenters
         /// </summary>
-        public Guid? PLCategory { get; set; }
-        public Guid? UOMId { get; set; }
-        public Guid? ItemId { get; set; }
+        public int? CostcenterId { get; set; }
+        public int? UOMId { get; set; }
+        public int? ItemId { get; set; }
         public string Description { get; set; }
         public decimal Quantity { get; set; }
         public decimal Rate { get; set; }
@@ -42,6 +42,8 @@ namespace HoneyBee.ApplicationCore.Entities
         public Transaction Transaction { get; set; }
         public Tax Tax { get; set; }
         public UnitsofMeasure UnitsofMeasure { get; set; }
+        public Item Item { get; set; }
+        public Costcenter Costcenter { get; set; }
 
         public ICollection<JournalDetail> JournalDetails { get; set; }
 

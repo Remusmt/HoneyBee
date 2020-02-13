@@ -9,9 +9,8 @@ namespace HoneyBee.ApplicationCore.Entities
 {
     public class BaseEntity : IBaseEntity
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public Guid CompanyId { get; set; }
         public bool InActive { get; set; }
     }

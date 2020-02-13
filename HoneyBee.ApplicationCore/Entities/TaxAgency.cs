@@ -18,8 +18,8 @@ namespace HoneyBee.ApplicationCore.Entities
         public Month Month { get; set; }
         public ReportingFrequency ReportingFrequency { get; set; }
         public ReportingMethod ReportingMethod { get; set; }
-        public Guid? PurchasesAccountId { get; set; }
-        public Guid? SalesAccountId { get; set; }
+        public int? PurchasesAccountId { get; set; }
+        public int? SalesAccountId { get; set; }
 
 
         public ChartofAccount PurchasesAccount { get; set; }

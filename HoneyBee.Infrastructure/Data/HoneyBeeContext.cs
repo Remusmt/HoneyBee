@@ -1,14 +1,36 @@
 ﻿using HoneyBee.ApplicationCore.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 
 namespace HoneyBee.Infrastructure.Data
 {
+    public class HoneyBeeContextFactory : IDesignTimeDbContextFactory<HoneyBeeContext>
+    {
+        public HoneyBeeContext CreateDbContext(string[] args)
+        {
+            var optionsBuilder = new DbContextOptionsBuilder<HoneyBeeContext>();
+            optionsBuilder.UseSqlServer("Server=DESKTOP-LPOGMEO\\SQLEXPRESS;Database=HoneyBeeContextDB;Trusted_Connection=True;MultipleActiveResultSets=true");
+            return new HoneyBeeContext(optionsBuilder.Options);
+        }
+    }
     public class HoneyBeeContext : DbContext
     {
+        public HoneyBeeContext(DbContextOptions<HoneyBeeContext> options) : base(options)
+        {
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+            builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        }
+
         public DbSet<Address> Addresses { get; set; }
+        public DbSet<EntityAddress> EntityAddresses { get; set; }
         public DbSet<Bank> Banks { get; set; }
         public DbSet<BankBranch> BankBranches { get; set; }
         public DbSet<Bin> Bins { get; set; }

@@ -19,7 +19,7 @@ namespace HoneyBee.ApplicationCore.Entities
         public DateTime TransactionDate { get; set; }
         public DateTime EnteredDate { get; set; }
         public string ReferenceNumber { get; set; }
-        public Guid CurrencyId { get; set; }
+        public int CurrencyId { get; set; }
         public decimal ExcangeRate { get; set; }
 
         public decimal SubTotal { get; set; }

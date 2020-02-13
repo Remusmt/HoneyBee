@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace HoneyBee.ApplicationCore.Entities
@@ -9,11 +10,15 @@ namespace HoneyBee.ApplicationCore.Entities
     /// </summary>
     public class CurrencyConversion
     {
-        public Guid? CurrencyId { get; set; }
-        public Currency Currency { get; set; }
+        [Key]
+        public int Id { get; set; }
+        public int CurrencyId { get; set; }
         /// <summary>
         /// [1][Company Currency] = [x] [this.Currency]
         /// </summary>
         public decimal Rate { get; set; }
+
+        public Currency Currency { get; set; }
+
     }
 }

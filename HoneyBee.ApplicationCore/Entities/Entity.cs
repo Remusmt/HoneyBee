@@ -8,7 +8,7 @@ namespace HoneyBee.ApplicationCore.Entities
     {
         public Entity()
         {
-            Addresses = new HashSet<Address>();
+            EntityAddresses = new HashSet<EntityAddress>();
         }
         /// <summary>
         /// Name of the organisation
@@ -17,7 +17,7 @@ namespace HoneyBee.ApplicationCore.Entities
         /// <summary>
         /// This is the currency by which this org's balance is maintained
         /// </summary>
-        public Guid CurrencyId { get; set; }
+        public int CurrencyId { get; set; }
         public DateTime CreatedOn { get; set; }
         /// <summary>
         /// Contact person firstname
@@ -28,15 +28,15 @@ namespace HoneyBee.ApplicationCore.Entities
         public string AltPhoneNumber { get; set; }
         public string Email { get; set; }
         public string CCEmail { get; set; }
-        public Guid? DefaultAddressId { get; set; }
-        public Guid? CategoryId { get; set; }
-        public Guid? PaymentTermId { get; set; }
+        public int? DefaultAddressId { get; set; }
+        public int? CategoryId { get; set; }
+        public int? PaymentTermId { get; set; }
         public decimal CreditLimit { get; set; }
         /// <summary>
         /// Used when user wants to track an organisations transactions on the
         /// General ledger separately
         /// </summary>
-        public Guid? ChartofAccountId { get; set; }
+        public int? ChartofAccountId { get; set; }
         /// <summary>
         /// Amount owing or owed. Saved in the org's currency
         /// </summary>
@@ -49,6 +49,6 @@ namespace HoneyBee.ApplicationCore.Entities
         public PaymentTerm PaymentTerm { get; set; }
         public ChartofAccount ChartofAccount { get; set; }
 
-        public ICollection<Address> Addresses { get; set; }
+        public ICollection<EntityAddress> EntityAddresses { get; set; }
     }
 }

@@ -6,6 +6,10 @@ namespace HoneyBee.ApplicationCore.Entities
 {
     public class Address : BaseEntity
     {
+        public Address()
+        {
+            EntityAddresses = new HashSet<EntityAddress>();
+        }
         public string TextAddress { get; set; }
 
         public string TextAddress1 { get; set; }
@@ -26,5 +30,7 @@ namespace HoneyBee.ApplicationCore.Entities
             stringBuilder.Append(!string.IsNullOrWhiteSpace(this.Country) ? this.Country.Trim() : string.Empty);
             return stringBuilder.ToString();
         }
+
+        public ICollection<EntityAddress> EntityAddresses { get; set; }
     }
 }
