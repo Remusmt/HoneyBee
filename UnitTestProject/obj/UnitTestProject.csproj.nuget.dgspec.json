@@ -4,14 +4,14 @@
     "C:\\Users\\remus\\source\\repos\\HoneyBee\\UnitTestProject\\UnitTestProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\remus\\source\\repos\\HoneyBee\\UnitTestProject\\UnitTestProject.csproj": {
+    "C:\\Users\\remus\\source\\repos\\HoneyBee\\HoneyBee.ApplicationCore\\HoneyBee.ApplicationCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\remus\\source\\repos\\HoneyBee\\UnitTestProject\\UnitTestProject.csproj",
-        "projectName": "UnitTestProject",
-        "projectPath": "C:\\Users\\remus\\source\\repos\\HoneyBee\\UnitTestProject\\UnitTestProject.csproj",
+        "projectUniqueName": "C:\\Users\\remus\\source\\repos\\HoneyBee\\HoneyBee.ApplicationCore\\HoneyBee.ApplicationCore.csproj",
+        "projectName": "HoneyBee.ApplicationCore",
+        "projectPath": "C:\\Users\\remus\\source\\repos\\HoneyBee\\HoneyBee.ApplicationCore\\HoneyBee.ApplicationCore.csproj",
         "packagesPath": "C:\\Users\\remus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\remus\\source\\repos\\HoneyBee\\UnitTestProject\\obj\\",
+        "outputPath": "C:\\Users\\remus\\source\\repos\\HoneyBee\\HoneyBee.ApplicationCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -40,6 +40,147 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\remus\\source\\repos\\HoneyBee\\HoneyBee.Infrastructure\\HoneyBee.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\remus\\source\\repos\\HoneyBee\\HoneyBee.Infrastructure\\HoneyBee.Infrastructure.csproj",
+        "projectName": "HoneyBee.Infrastructure",
+        "projectPath": "C:\\Users\\remus\\source\\repos\\HoneyBee\\HoneyBee.Infrastructure\\HoneyBee.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\remus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\remus\\source\\repos\\HoneyBee\\HoneyBee.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\remus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\remus\\source\\repos\\HoneyBee\\HoneyBee.ApplicationCore\\HoneyBee.ApplicationCore.csproj": {
+                "projectPath": "C:\\Users\\remus\\source\\repos\\HoneyBee\\HoneyBee.ApplicationCore\\HoneyBee.ApplicationCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\remus\\source\\repos\\HoneyBee\\UnitTestProject\\UnitTestProject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\remus\\source\\repos\\HoneyBee\\UnitTestProject\\UnitTestProject.csproj",
+        "projectName": "UnitTestProject",
+        "projectPath": "C:\\Users\\remus\\source\\repos\\HoneyBee\\UnitTestProject\\UnitTestProject.csproj",
+        "packagesPath": "C:\\Users\\remus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\remus\\source\\repos\\HoneyBee\\UnitTestProject\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\remus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\remus\\source\\repos\\HoneyBee\\HoneyBee.ApplicationCore\\HoneyBee.ApplicationCore.csproj": {
+                "projectPath": "C:\\Users\\remus\\source\\repos\\HoneyBee\\HoneyBee.ApplicationCore\\HoneyBee.ApplicationCore.csproj"
+              },
+              "C:\\Users\\remus\\source\\repos\\HoneyBee\\HoneyBee.Infrastructure\\HoneyBee.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\remus\\source\\repos\\HoneyBee\\HoneyBee.Infrastructure\\HoneyBee.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
           "dependencies": {
             "MSTest.TestAdapter": {
               "target": "Package",
@@ -56,6 +197,10 @@
             "coverlet.collector": {
               "target": "Package",
               "version": "[1.0.1, )"
+            },
+            "xunit.extensibility.core": {
+              "target": "Package",
+              "version": "[2.4.1, )"
             }
           },
           "imports": [

@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -13,9 +14,11 @@ namespace HoneyBee.Infrastructure.Repository
     public class Repository<T> : IRepository<T> where T : BaseEntity
     {
         protected readonly HoneyBeeContext honeyBeeContext;
-        public Repository(DbContextOptions<HoneyBeeContext> options)
+        public Repository(HoneyBeeContext _honeyBeeContext)
         {
-            honeyBeeContext = new HoneyBeeContext(options);
+            //DbContextOptions<HoneyBeeContext> _options = new DbContextOptionsBuilder<HoneyBeeContext>()
+            //    .UseSqlServer(connString).Options;
+            honeyBeeContext = _honeyBeeContext;
         }
 
         public void Add(T entity)
@@ -86,5 +89,9 @@ namespace HoneyBee.Infrastructure.Repository
             return await honeyBeeContext.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
         }
 
+        public IEnumerable<T> Find(Expression<Func<T, bool>> predicate)
+        {
+            return honeyBeeContext.Set<T>().Where(predicate);
+        }
     }
 }
