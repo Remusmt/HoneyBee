@@ -10,8 +10,8 @@ namespace HoneyBee.ApplicationCore.Interfaces
     {
         bool IfCodeExists(string code, Guid companyId);
         bool IfDescriptionExists(string description, Guid companyId);
-        bool IfDeplicateCode(int Id, string code, Guid companyId);
-        bool IfDeplicateDescription(int Id, string description, Guid companyId);
+        bool IfDuplicateCode(int Id, string code, Guid companyId);
+        bool IfDuplicateDescription(int Id, string description, Guid companyId);
         Task<IList<T>> GetTree();
     }
 }

@@ -1,7 +1,5 @@
 ﻿using HoneyBee.ApplicationCore.Entities.Enums;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace HoneyBee.ApplicationCore.Entities
 {
@@ -32,6 +30,10 @@ namespace HoneyBee.ApplicationCore.Entities
         /// Should be only of the the same type, and have same currency
         /// </summary>
         public int? ParentAccountId { get; set; }
+        /// <summary>
+        /// Simply get if has parent its parent height + 1, else 0
+        /// </summary>
+        public byte Height { get; set; }
         /// <summary>
         /// For expense accounts
         /// </summary>

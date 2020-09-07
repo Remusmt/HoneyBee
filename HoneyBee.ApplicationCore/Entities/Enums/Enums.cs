@@ -184,4 +184,10 @@ namespace HoneyBee.ApplicationCore.Entities.Enums
         Volume,
         Time
     }
+
+    public enum SubscriptionType
+    {
+        Service,
+        GeneralSupplies
+    }
 }

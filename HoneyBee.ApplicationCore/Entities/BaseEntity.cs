@@ -13,5 +13,6 @@ namespace HoneyBee.ApplicationCore.Entities
         public int Id { get; set; }
         public Guid CompanyId { get; set; }
         public bool InActive { get; set; }
+        public DateTime TimeCreated { get; set; }
     }
 }

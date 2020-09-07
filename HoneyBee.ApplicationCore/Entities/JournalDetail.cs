@@ -1,7 +1,4 @@
-﻿using HoneyBee.ApplicationCore.Entities.Enums;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
 namespace HoneyBee.ApplicationCore.Entities
 {

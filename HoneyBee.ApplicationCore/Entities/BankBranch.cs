@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace HoneyBee.ApplicationCore.Entities
 {
@@ -12,6 +9,7 @@ namespace HoneyBee.ApplicationCore.Entities
         public int BankId { get; set; }
         public string BranchCode { get; set; }
         public string BranchName { get; set; }
+        public string SwiftCode { get; set; }
 
         public Bank Bank { get; set; }
 

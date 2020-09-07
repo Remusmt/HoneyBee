@@ -28,12 +28,12 @@ namespace HoneyBee.Infrastructure.Repository
             return honeyBeeContext.Set<T>().Any(e => e.Code == code && e.CompanyId == companyId);
         }
 
-        public bool IfDeplicateCode(int Id, string code, Guid companyId)
+        public bool IfDuplicateCode(int Id, string code, Guid companyId)
         {
             return honeyBeeContext.Set<T>().Any(e => e.Code == code && e.CompanyId == companyId && e.Id != Id);
         }
 
-        public bool IfDeplicateDescription(int Id, string description, Guid companyId)
+        public bool IfDuplicateDescription(int Id, string description, Guid companyId)
         {
             return honeyBeeContext.Set<T>()
                 .Any(e => e.Description == description && e.CompanyId == companyId && e.Id != Id);

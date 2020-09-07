@@ -24,12 +24,12 @@ namespace HoneyBee.ApplicationCore.Services
             {
                 if (categoryRepository.IfCodeExists(category.Code, category.CompanyId))
                 {
-                    throw new Exception("A record with a similar code already exixst");
+                    throw new Exception("A record with a similar code already exist");
                 }
             }
             if (categoryRepository.IfDescriptionExists(category.Description, category.CompanyId))
             {
-                throw new Exception("A record with a similar description already exixst");
+                throw new Exception("A record with a similar description already exist");
             }
 
             categoryRepository.Add(category);
@@ -46,13 +46,13 @@ namespace HoneyBee.ApplicationCore.Services
             }
             if (!string.IsNullOrWhiteSpace(category.Code))
             {
-                if (categoryRepository.IfDeplicateCode(category.Id, category.Code, category.CompanyId))
+                if (categoryRepository.IfDuplicateCode(category.Id, category.Code, category.CompanyId))
                 {
                     throw new Exception("Updating record with the provided code would create a duplicate record");
                 }
             }
            
-            if (categoryRepository.IfDeplicateDescription(category.Id, category.Description, category.CompanyId))
+            if (categoryRepository.IfDuplicateDescription(category.Id, category.Description, category.CompanyId))
             {
                 throw new Exception("Updating record with the provided description would create a duplicate record");
             }
@@ -61,6 +61,20 @@ namespace HoneyBee.ApplicationCore.Services
             await categoryRepository.SaveChangesAsync();
 
             return true;
+        }
+
+        public async Task<bool> Delete(T category)
+        {
+            try
+            {
+                categoryRepository.Delete(category);
+                await categoryRepository.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception)
+            {
+                throw new Exception("Unable to delete this record because its in use");
+            }
         }
     }
 }
